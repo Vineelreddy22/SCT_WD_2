@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stopwatch Pro</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>⌚ Stopwatch Pro</h1>
+    <p class="subtitle">Precision Time Tracker</p>
+
+    <div class="status">
+        <span id="statusBadge">Ready</span>
+        <div id="lastTime" class="last-time">Last: --</div>
+    </div>
+
+    <!-- Analog clock synced to stopwatch -->
+    <div class="analog">
+        <div class="dial">
+            <div class="hand hour" id="handHour"></div>
+            <div class="hand minute" id="handMinute"></div>
+            <div class="hand second" id="handSecond"></div>
+            <div class="center-dot"></div>
+        </div>
+    </div>
+
+    <div id="display">
+        00:00:00:000
+    </div>
+
+    <div class="buttons">
+        <button id="start" data-label="Start" aria-label="Start"><i class="fa-solid fa-play"></i></button>
+        <button id="pause" data-label="Pause" aria-label="Pause"><i class="fa-solid fa-pause"></i></button>
+        <button id="lap" data-label="Lap" aria-label="Lap"><i class="fa-solid fa-flag-checkered"></i></button>
+        <button id="reset" data-label="Reset" aria-label="Reset"><i class="fa-solid fa-rotate-right"></i></button>
+    </div>
+
+    <div class="stats">
+        <div class="card">
+            <h3>Total Laps</h3>
+            <p id="totalLaps">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Fastest</h3>
+            <p id="fastest">--</p>
+        </div>
+
+        <div class="card">
+            <h3>Slowest</h3>
+            <p id="slowest">--</p>
+        </div>
+
+        <div class="card">
+            <h3>Average</h3>
+            <p id="average">--</p>
+        </div>
+    </div>
+
+    <div class="laps">
+        <h2>Lap Records</h2>
+        <ul id="lapList"></ul>
+    </div>
+
+    <div class="previous-runs">
+        <h2>Previous Runs</h2>
+        <p id="noPreviousRuns">No previous runs yet.</p>
+        <ul id="previousRunsList"></ul>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
